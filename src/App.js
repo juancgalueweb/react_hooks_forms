@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FormComp } from "./components/FormComp";
-import { OutputComp } from "./components/OutputComp";
 
 export const App = () => {
   const [user, setUser] = useState({
@@ -10,10 +9,5 @@ export const App = () => {
     password: "",
     confirmPassword: "",
   });
-  return (
-    <>
-      <FormComp form={user} setForm={setUser} />
-      <OutputComp output={user} />
-    </>
-  );
+  return <FormComp form={user} setForm={setUser} />;
 };
